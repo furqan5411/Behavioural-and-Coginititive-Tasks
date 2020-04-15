@@ -1,6 +1,3 @@
-﻿# Exercise 6: 
-## Kinematic Simulations
-
 The source code (discrim.cpp, discrim.h, utilities.cpp, utilities.h, robot-env.cpp, robot-env.h, ErDiscrim.pxd, ErDiscrim.pyx, and setupErDiscrim.py) can be compiled from the ./lib folder with the following instructions:
 
 
@@ -29,13 +26,9 @@ I noticed 2 different behaviors of the robot:
 
 The robot is able to reach the target in all cases, because it has sensors, which allow him to perceive the environment very well.Different behavior strategies in my opinion are due to the difference in the training process and the presence of a large number of sensors, that is, in each case, the robot can perceive the environment differently and build its behavior accordingly
 
-> Run other experiments by using a feed-forward neural architecture (without memory). 
+Run other experiments by using a feed-forward neural architecture (without memory). 
 To enable Feed Forward neural network mode go to the ./xdiscrim folder and open ErDiscrim.ini file.
-There find the line architecture:
-``` bash
-architecture = 3. Enables LSTM (Long Short Term Memory architecture)
-architecture = 0. Enables Feed forward neural architecture without memory.
-```
+
 I run experiments and noticed that sometimes the robot is able to reach the target, sometimes it moves very slowly and drives past the target, sometimes very quickly and can't reach. In all cases it can't stop near the target.
-> Explain how the behavior of evolved robots differ from those evolved with the LSTM architecture (i.e. the Long Short Term Memory architecture).
-I run experiments and noticed that sometimes the robot is able to reach the target, sometimes it moves very slowly and drives past the target, sometimes very quickly and can't reach. In all cases it can't stop near the target. The robot doesn't know where to stop due to it hasn't feedback part and can't estimate the state properly. That is why it can go through the target and skip it
+
+During experiments I noticed often robot reaches the target, often it moves slow and pass the target, sometimes very quickly and can't reach. In all cases it can't stop near the targe I think robot doesn't know where to sto stop as it lacks the feedback path. That is why it can go through the target and skip it.
