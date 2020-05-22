@@ -1,4 +1,7 @@
-//update block(Original)
+
+The code below is a part of evonet.ccp code in the evotropy/lib. This code is pasted in the update block of evonet.cpp file to run.
+
+//update block
 //nc is variable conditioning the type of neurons()
 int nc = 0;
 
